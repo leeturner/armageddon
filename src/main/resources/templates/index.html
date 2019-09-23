@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Armageddon Watcher</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+</head>
+<body>
+    <div align="center">
+        <h1>Armageddon Watch</h1>
+        <img width="600px" th:src="${apod.url}" th:alt="${apod.title}"/>
+        <p>
+            There are <span th:text="${neos.elementCount}"/> Near Earth Objects today and <span th:text="${neos.potentiallyHazardousAsteroidCount}"/> of them could be potentially hazardous.
+        </p>
+        <p th:if="${neos.getPotentiallyHazardousAsteroidCount() > 0}">
+           It might be time to call <a href="https://twitter.com/bruceywillis">Bruce Willis</a>
+        </p>
+    </div>
+</body>
+</html>

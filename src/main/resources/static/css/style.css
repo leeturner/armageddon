@@ -1,0 +1,14 @@
+body {
+    background: black;
+}
+h1 {
+    font-size: 38px;
+    color: azure;
+}
+p {
+    font-size: 22px;
+    color: azure;
+}
+a, a:hover {
+    color: bisque;
+}

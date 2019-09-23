@@ -7,10 +7,10 @@ import java.io.IOException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
-public class ApodUnitTest {
+class ApodUnitTest {
 
     @Test
-    void testJacksonSerialisation() throws IOException {
+    void testApodJacksonSerialisation() throws IOException {
         Apod apod = new ObjectMapper().readValue(this.getClass().getResourceAsStream("/apod/apod.json"), Apod.class);
 
         assertThat(apod.getCopyright()).isEqualTo("Anton Komlev");
