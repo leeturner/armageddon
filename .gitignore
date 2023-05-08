@@ -24,6 +24,7 @@ hs_err_pid*
 
 # intellij bits
 .idea
+target
 
 # maven bits
 .mvn
